@@ -164,6 +164,10 @@
     }
   }
 
+  .dummy__bg {
+    height: 100%;
+  }
+
 
   &__bg {
     font-size: 0;
@@ -171,7 +175,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     top: 0;
     right: 0;
     z-index: 4;
@@ -199,6 +202,5 @@
         height: 100%;
       }
     }
-
   }
 }
