@@ -1,0 +1,18 @@
+.container {
+  max-width: 116rem;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: content-box;
+
+  @media (max-width: 1440px) {
+    min-width: 67.8rem;
+    max-width: 118rem;
+  }
+
+  @media (max-width: $tablet) {
+    min-width: initial;
+    max-width: initial;
+    padding: 0 2rem;
+  }
+}
+

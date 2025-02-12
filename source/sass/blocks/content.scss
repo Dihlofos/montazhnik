@@ -1,0 +1,87 @@
+.content {
+  padding: 6.1rem 0 12rem;
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 60rem;
+    flex-shrink: 0;
+  }
+
+  &__item {
+    button {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: none;
+      border: 1px solid $turq;
+      padding: 1.4rem 1.8rem 1.7rem 1.6rem;
+      color: $white;
+      text-align: left;
+      width: 26rem;
+      height: 25.7rem;
+
+      &:hover {
+        box-shadow: 0px 0px 23.7px 0px $turq;
+      }
+    }
+  }
+
+  &__item-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 0;
+    font-weight: 400;
+    font-family: $bower;
+  }
+
+  &__item-text {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 1;
+  }
+
+  &__inner-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    p {
+      margin: 0 0 2rem;
+    }
+  }
+
+  &__images {
+    position: relative;
+  }
+
+  &__inner-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

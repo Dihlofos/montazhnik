@@ -1,0 +1,23 @@
+.title {
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 400;
+  font-family: $bower;
+  color: $white;
+  text-transform: uppercase;
+
+  &--black {
+    color: $black;
+  }
+
+
+  @media (max-width: $tablet) {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}

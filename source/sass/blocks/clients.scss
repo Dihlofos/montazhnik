@@ -1,0 +1,40 @@
+.clients {
+  padding: 10.7rem 0 11rem;
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0 0 7rem;
+  }
+
+  &__slider {
+    position: relative;
+    padding-left: 20.5rem;
+
+    .swiper-nav {
+      position: absolute;
+      left: 0;
+      user-select: none;
+      top: 0;
+    }
+  }
+
+  &__slide {
+    display: block;
+    width: auto !important;
+    user-select: none;
+
+    a {
+      position: relative;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        filter: invert(50%) sepia(95%) saturate(355%) hue-rotate(127deg) brightness(94%) contrast(89%);
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.hero {
+  margin-top: 21rem;
+  position: relative;
+
+  .container {
+    position: relative;
+    padding: 0 0 21rem;
+    border-bottom: 1px solid $white;
+
+    &:after,
+    &:before {
+      position: absolute;
+      content: '';
+      width: 5.8rem;
+      height: 5.8rem;
+      z-index: 6;
+    }
+
+    &:before {
+      bottom: 2.9rem;
+      left: 0;
+      border-left: 1px solid $white;
+      border-bottom: 1px solid $white;
+    }
+
+    &:after {
+      bottom: -8.7rem;
+      right: 0;
+      border-top: 1px solid $white;
+      border-right: 1px solid $white;
+
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 5;
+  }
+
+  &__text {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    max-width: 28.4rem;
+    margin: 0;
+    margin-bottom: -0.3rem;
+    margin-right: 7.6rem;
+  }
+
+}
