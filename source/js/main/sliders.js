@@ -3,6 +3,7 @@
   //projects
 
   const sliders = document.querySelectorAll(".js-projects-slider");
+  const vw = window.outerWidth;
 
   sliders.forEach((el, index) => {
     const id = `#projects-slider-${index}`;
@@ -35,7 +36,30 @@
       nextEl: ".js-clients-slider .swiper-next",
       prevEl: ".js-clients-slider .swiper-prev",
     },
+    breakpoints: {
+      360: {
+        spaceBetween: 30,
+      },
+
+      768: {
+        spaceBetween: 60,
+      },
+    },
   });
+
+  if (vw < 1025) {
+    new Swiper(".js-reviews-slider-container", {
+      loop: false,
+      slidesPerView: 1,
+      speed: 1000,
+      spaceBetween: 40,
+      pagination: false,
+      navigation: {
+        nextEl: ".js-reviews-slider .swiper-next",
+        prevEl: ".js-reviews-slider .swiper-prev",
+      },
+    });
+  }
 
   new Swiper(".js-news-slider-container", {
     loop: false,

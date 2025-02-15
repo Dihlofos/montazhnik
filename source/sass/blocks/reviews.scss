@@ -1,6 +1,14 @@
 .reviews {
   padding: 10rem 0 10rem;
 
+  @media (max-width: $tablet) {
+    padding: 5rem 0 5rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 7rem 0 5rem;
+  }
+
   .swiper-wrapper {
     display: flex;
     justify-content: space-between;
@@ -11,27 +19,56 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     margin: 0 0 6.4rem;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 4rem;
+    }
   }
 
   &__title {
     margin: 0;
+
+    @media (max-width: $tablet) {
+      align-self: flex-end;
+      margin: 0 0 4rem;
+    }
   }
 
   &__description {
     font-size: 1.4rem;
     line-height: 1.2;
     width: 42.5rem;
+
+    @media (max-width: $mobile) {
+      font-size: 1.2rem;
+      line-height: 1.2;
+      width: 55%;
+    }
   }
 
   &__slide {
     width: 36rem;
     border: 1px solid $turq;
     padding: 1.7rem 3.5rem 1.7rem 1.7rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 4rem;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 1.7rem 1.5rem 1.4rem 1.7rem;
+      margin: 0 0 2rem;
+    }
   }
 
   .swiper-nav {
-    @media (min-width: $tablet) {
-      display: none;
+    display: none;
+    @media (max-width: $tablet) {
+      display: flex;
     }
   }
 
@@ -39,34 +76,66 @@
     display: flex;
     justify-content: center;
     padding: 6rem 0 3.4rem;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__slide-header {
     display: flex;
     gap: 1.8rem;
     margin: 0 0 3.2rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 2.1rem;
+    }
   }
 
   &__client {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: $mobile) {
+      justify-content: flex-start;
+    }
   }
 
   &__client-name {
     font-family: $bower;
     font-size: 1.8rem;
     line-height: 1.1;
+
+    @media (max-width: $mobile) {
+      font-size: 1.3rem;
+      margin: 0 0 0.5rem;
+    }
   }
 
   &__client-company {
     font-size: 1.4rem;
     line-height: 1.2;
+
+    @media (max-width: $mobile) {
+      font-size: 1.2rem;
+    }
   }
 
   &__review-text {
     font-size: 1.4rem;
     line-height: 1.2;
+
+
+    @media (max-width: $mobile) {
+      font-size: 1.2rem;
+
+      p {
+        margin: 0;
+      }
+    }
   }
+
+
 
 }

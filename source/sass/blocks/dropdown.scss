@@ -1,0 +1,96 @@
+.dropdown {
+  position: relative;
+  width: 26rem;
+
+  @media(max-width: $mobile) {
+    width: 23.2rem;
+  }
+
+  .button {
+    width: 26rem;
+
+    @media(max-width: $mobile) {
+      width: 23.2rem;
+    }
+  }
+
+  &__trigger {
+    display: flex;
+    gap: 0.7rem;
+    position: relative;
+    cursor: pointer;
+    z-index: 5;
+    transition: 0.2s box-shadow ease-in-out;
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 0;
+
+    span {
+      padding: 1rem 1.5rem;
+      color: $black;
+      background-color: $turq;
+      flex-grow: 1;
+    }
+
+    svg path {
+      transform-origin: 50% 50%;
+      transition: all 0.2s ease-in;
+    }
+
+    .dropdown.open & {
+      svg path {
+        transform: rotate(-90deg);
+      }
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 3.6rem 0 0;
+    margin: 0;
+    border-bottom: 1px solid $white;
+  }
+
+  &__item {
+    button {
+      border-top: 1px solid $white;
+      border-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: $turq;
+    padding: 0 2rem 0 2.3rem;
+    text-decoration: none;
+    transition: 0.1s font-weight ease-in-out, 0.1s background-color ease-in-out;
+
+    &:hover {
+      font-weight: 700;
+      background-color: $black;
+    }
+  };
+
+  &__content {
+    transition: max-height 0.3s ease-in-out;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 4;
+    overflow: hidden;
+    max-height: 3.6rem;
+
+    .dropdown.open & {
+      max-height: 100rem;
+    }
+
+  }
+}

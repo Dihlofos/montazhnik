@@ -1,6 +1,7 @@
 "use strict";
 (function () {
   let services = document.querySelector(".js-services");
+  const dropdownTrigger = services.querySelector(".js-dropdown-trigger span");
   let activeClass = "active";
   if (!services) {
     return;
@@ -29,10 +30,16 @@
     const serviceToShow = services.querySelector(
       `.js-services-item[data-service="${serviceNumber}"]`
     );
+
     if (!serviceToShow) {
       return;
     }
     serviceToShow.classList.add(activeClass);
-    el.target.classList.add(activeClass);
+    services
+      .querySelectorAll(`.js-services-link[data-service="${serviceNumber}"]`)
+      .forEach((link) => {
+        link.classList.add(activeClass);
+        dropdownTrigger.textContent = link.textContent;
+      });
   }
 })();

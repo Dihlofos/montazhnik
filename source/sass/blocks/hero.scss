@@ -2,10 +2,25 @@
   margin-top: 21rem;
   position: relative;
 
+  @media (max-width: $mobile) {
+    margin-top: 10.8rem;
+  }
+
   .container {
     position: relative;
     padding: 0 0 21rem;
     border-bottom: 1px solid $white;
+    z-index: 4;
+
+    @media (max-width: $tablet) {
+      padding: 0 4rem 21rem;
+      margin: 0 4rem;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 0;
+      margin: 0 1.6rem;
+    }
 
     &:after,
     &:before {
@@ -28,7 +43,22 @@
       right: 0;
       border-top: 1px solid $white;
       border-right: 1px solid $white;
+    }
 
+    @media (max-width: $mobile) {
+      &:after,
+      &:before {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      &:before {
+        bottom: 0.9rem;
+      }
+
+      &:after {
+        bottom: -2.9rem;
+      }
     }
   }
 
@@ -38,6 +68,20 @@
     justify-content: space-between;
     align-items: flex-end;
     z-index: 5;
+
+    @media (max-width: $tablet) {
+      img {
+        width: 67%;
+      }
+    }
+
+    @media (max-width: $mobile) {
+     flex-direction: column;
+
+     img {
+      width: 100%;
+     }
+    }
   }
 
   &__text {
@@ -48,6 +92,15 @@
     margin: 0;
     margin-bottom: -0.3rem;
     margin-right: 7.6rem;
+
+    @media (max-width: $mobile) {
+      margin-top: 10.2rem;
+      margin-bottom: 13.5rem;
+      font-size: 1.2rem;
+      max-width: 18rem;
+      align-self: flex-start;
+      margin-right: 0;
+    }
   }
 
 }

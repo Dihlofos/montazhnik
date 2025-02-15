@@ -23,6 +23,12 @@
         width: 16.1rem;
         background-color: $turq;
         z-index: 6;
+
+        @media (max-width: $mobile) {
+          width: 7.6rem;
+          height: calc(100% - 25rem);
+
+        }
       }
     }
   }
@@ -41,14 +47,13 @@
     background: transparent;
     user-select: none;
 
-    &.active + div {
-      transform: scale(1) translateX(0);
+    @media (min-width: $tablet) {
+      &.active + div {
+        transform: scale(1) translateX(0);
 
-
-      &:after {
-        opacity: 1;
       }
     }
+
   }
 
   &__bg {
@@ -65,9 +70,16 @@
     transition: all 0.3s ease-in;
     z-index: 4;
 
-    img {
+    video {
+      height: 100%;
       width: 100%;
-      height: auto;
+      object-fit: cover;
+    }
+
+    @media (max-width: $tablet) {
+      right: auto;
+      left: 50%;
+      transform: scale(1) translateX(-50%);
     }
   }
 }

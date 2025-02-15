@@ -3,8 +3,21 @@
   color: $black;
   padding: 16.6rem 0 9.4rem;
 
+  @media (max-width: $mobile) {
+    padding: 9.2rem 0 2.4rem;
+  }
+
   .container {
     position: relative;
+
+    @media (max-width: $tablet) {
+      margin: 0 4rem;
+      padding: 0;
+    }
+
+    @media (max-width: $tablet) {
+      margin: 0 1.6rem;
+    }
   }
 
   &__header {
@@ -34,6 +47,25 @@
       border-right: 1px solid $black;
       border-top: 1px solid $black;
     }
+
+    @media (max-width: $mobile) {
+      padding-top: 5.7rem;
+      margin: 0 0 5.4rem;
+
+      &:after,
+      &:before {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      &:before {
+        top: -2.9rem;
+      }
+
+      &:after {
+        top: 0.9rem;
+      }
+    }
   }
 
   &__title {
@@ -43,23 +75,46 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 0 15.5rem;
+    margin: 0 0 13.5rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 5rem;
+    }
   }
 
   &__block {
     width: 50%;
-    margin: 0 0 0.8rem;
+    margin: 0 0 2.8rem;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin: 0 0 3.3rem;
+    }
   }
 
   &__copyright {
     font-size: 1.4rem;
     margin-left: 9.5rem;
     margin-bottom: 0.5rem;
+
+    @media (max-width: $mobile) {
+      margin-left: 0;
+      width: 50%;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__partner {
+    width: 7.9rem;
   }
 
   &__block-title {
     font-size: 1.4rem;
     margin: 0 0 1.2rem;
+
+    @media (max-width: $mobile) {
+      font-size: 1.2rem;
+    }
   }
 
   &__link {
@@ -68,6 +123,16 @@
     line-height: 1;
     text-decoration: none;
     color: $black;
+
+    @media (max-width: $tablet) {
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: $tablet) {
+      img {
+        width: 16.5rem;
+      }
+    }
 
     &:hover {
       color: $white;
@@ -80,6 +145,10 @@
     &:first-child {
       margin: 0 0 0.5rem;
     }
+
+    @media (max-width: $mobile) {
+      font-size: 1.2rem;
+    }
   }
 
   &__partner {
@@ -91,6 +160,10 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+    }
   }
 
   &__docs {
@@ -98,6 +171,16 @@
     align-items: flex-end;
     gap: 1.7rem;
     padding-bottom: 1rem;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+
+      img {
+        width: 6.6rem;
+      }
+    }
   }
 
   &__links {

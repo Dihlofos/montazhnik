@@ -1,24 +1,49 @@
 .clients {
   padding: 10.7rem 0 11rem;
 
+  @media (max-width: $tablet) {
+    padding: 5rem 0 5rem;
+  }
+
   .swiper-wrapper {
     display: flex;
     align-items: center;
+
+    @media (max-width: $mobile) {
+      padding-left: 2.5rem;
+    }
   }
 
   &__title {
     margin: 0 0 7rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 4.5rem;
+    }
   }
 
   &__slider {
     position: relative;
     padding-left: 20.5rem;
 
+    @media (max-width: $tablet) {
+      padding-left: 0;
+    }
+
     .swiper-nav {
       position: absolute;
       left: 0;
       user-select: none;
       top: 0;
+
+      @media (max-width: $tablet) {
+        position: static;
+        margin: 0 0 2rem;
+      }
+
+      @media (max-width: $mobile) {
+        margin: 0 0 3rem;
+      }
     }
   }
 
@@ -34,6 +59,15 @@
 
       &:hover {
         filter: invert(50%) sepia(95%) saturate(355%) hue-rotate(127deg) brightness(94%) contrast(89%);
+      }
+    }
+
+    @media (max-width: $mobile) {
+      height: 4.2rem;
+
+      img {
+        height: 4.2rem;
+        width: auto;
       }
     }
   }

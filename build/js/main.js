@@ -68,6 +68,39 @@
 
 "use strict";
 (function () {
+  const dropdowns = document.querySelectorAll(".js-dropdown");
+
+  document.addEventListener("click", (el) => {
+    const clicked = el
+      .composedPath()
+      .find((value) => value?.classList?.contains("js-dropdown-trigger"));
+
+    if (!clicked) {
+      clear();
+    }
+  });
+
+  if (!dropdowns.length) {
+    return;
+  }
+
+  dropdowns.forEach((dropdown) => {
+    const trigger = dropdown.querySelector(".js-dropdown-trigger");
+
+    trigger.addEventListener("click", () => {
+      dropdown.classList.toggle("open");
+    });
+  });
+
+  function clear() {
+    dropdowns.forEach((dropdown) => {
+      dropdown.classList.remove("open");
+    });
+  }
+})();
+
+"use strict";
+(function () {
   const nav = document.querySelector('.js-nav');
   const toggler = document.querySelector('.js-nav-toggler');
   const closeButtons = document.querySelectorAll('.js-nav-close');
@@ -102,6 +135,7 @@
 "use strict";
 (function () {
   let services = document.querySelector(".js-services");
+  const dropdownTrigger = services.querySelector(".js-dropdown-trigger span");
   let activeClass = "active";
   if (!services) {
     return;
@@ -130,11 +164,17 @@
     const serviceToShow = services.querySelector(
       `.js-services-item[data-service="${serviceNumber}"]`
     );
+
     if (!serviceToShow) {
       return;
     }
     serviceToShow.classList.add(activeClass);
-    el.target.classList.add(activeClass);
+    services
+      .querySelectorAll(`.js-services-link[data-service="${serviceNumber}"]`)
+      .forEach((link) => {
+        link.classList.add(activeClass);
+        dropdownTrigger.textContent = link.textContent;
+      });
   }
 })();
 
@@ -143,6 +183,7 @@
   //projects
 
   const sliders = document.querySelectorAll(".js-projects-slider");
+  const vw = window.outerWidth;
 
   sliders.forEach((el, index) => {
     const id = `#projects-slider-${index}`;
@@ -175,7 +216,30 @@
       nextEl: ".js-clients-slider .swiper-next",
       prevEl: ".js-clients-slider .swiper-prev",
     },
+    breakpoints: {
+      360: {
+        spaceBetween: 30,
+      },
+
+      768: {
+        spaceBetween: 60,
+      },
+    },
   });
+
+  if (vw < 1025) {
+    new Swiper(".js-reviews-slider-container", {
+      loop: false,
+      slidesPerView: 1,
+      speed: 1000,
+      spaceBetween: 40,
+      pagination: false,
+      navigation: {
+        nextEl: ".js-reviews-slider .swiper-next",
+        prevEl: ".js-reviews-slider .swiper-prev",
+      },
+    });
+  }
 
   new Swiper(".js-news-slider-container", {
     loop: false,
