@@ -108,7 +108,7 @@
       }
     }
 
-    &.active {
+    &.services-active {
       @media (max-width: $mobile) {
         &:before {
           opacity: 1;

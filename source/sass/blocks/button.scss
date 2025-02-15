@@ -32,7 +32,8 @@
 
   &:hover,
   &:active,
-  &.active {
+  &.active,
+  &.services-active {
     @media (min-width: $tablet) {
       &:not(:disabled) {
         color: $black;

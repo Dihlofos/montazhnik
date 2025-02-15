@@ -136,7 +136,7 @@
 (function () {
   let services = document.querySelector(".js-services");
   const dropdownTrigger = services.querySelector(".js-dropdown-trigger span");
-  let activeClass = "active";
+  let activeClass = "services-active";
   if (!services) {
     return;
   }

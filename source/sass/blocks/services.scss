@@ -87,7 +87,7 @@
 
   &__nav-button {
     @media (max-width: $tablet) {
-      &.active {
+      &.services-active {
         display: none;
       }
     }
@@ -112,7 +112,7 @@
 
     }
 
-    &.active {
+    &.services-active {
       display: flex;
       justify-content: space-between;
     }
