@@ -11,6 +11,7 @@
 
   serviceLinks.forEach((link) => {
     link.addEventListener("click", (el) => {
+      console.log(el.target);
       if (el.target.classList === activeClass) {
         return;
       }
