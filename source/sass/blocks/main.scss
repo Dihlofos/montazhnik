@@ -70,6 +70,10 @@
     transition: all 0.3s ease-in;
     z-index: 4;
 
+    .mobiles {
+      display: none;
+    }
+
     video {
       height: 100%;
       width: 100%;
@@ -80,6 +84,16 @@
       right: auto;
       left: 50%;
       transform: scale(1) translateX(-50%);
+    }
+
+    @media (max-width: $mobile) {
+      .mobiles {
+        display: block;
+      }
+
+      .desktop {
+        display: none;
+      }
     }
   }
 }
