@@ -104,9 +104,7 @@
     }
   }
 
-  &__partner {
-    width: 7.9rem;
-  }
+
 
   &__block-title {
     font-size: 1.4rem;
@@ -139,6 +137,17 @@
     }
   }
 
+  &__socials {
+    display: flex;
+    gap: 2rem;
+
+    .footer__link {
+      img {
+        max-width: 4rem
+      }
+    }
+  }
+
   &__small-link {
     font-size: 1.4rem;
 
@@ -154,7 +163,12 @@
   &__partner {
     margin-right: -1rem;
     margin-top: 1rem;
+
+    @media (max-width: $tablet) {
+      width: 7.9rem;
+    }
   }
+
 
   &__footer {
     display: flex;
