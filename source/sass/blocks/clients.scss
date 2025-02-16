@@ -57,9 +57,9 @@
       text-decoration: none;
       display: block;
 
-      &:hover {
-        filter: invert(50%) sepia(95%) saturate(355%) hue-rotate(127deg) brightness(94%) contrast(89%);
-      }
+      // &:hover {
+      //   filter: invert(50%) sepia(95%) saturate(355%) hue-rotate(127deg) brightness(94%) contrast(89%);
+      // }
     }
 
     @media (max-width: $mobile) {
