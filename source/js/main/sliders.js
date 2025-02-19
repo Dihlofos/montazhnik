@@ -35,7 +35,7 @@
    const elementSelector = `${id} .js-services-slider-container`;
 
    const nextSelector = `${id} .swiper-next`;
-   const prevSelector = `${id} .swiper-prev`;
+   const prevSelector = `${id} .swiper-prev`; 
 
    new Swiper(elementSelector, {
       loop: false,
@@ -48,6 +48,32 @@
       },
    });
    });
+
+
+   const standartsSliders = document.querySelectorAll(".js-standarts-slider");
+
+      standartsSliders.forEach((el, index) => {
+      const id = `#standarts-slider-${index}`;
+      const elementSelector = `${id} .js-standarts-slider-container`;
+      const nextSelector = `${id} .swiper-next`;
+      const prevSelector = `${id} .swiper-prev`;
+
+      if (vw < 1025) {
+         new Swiper(elementSelector, {
+            loop: false,
+            slidesPerView: 1,
+            speed: 1000,
+            spaceBetween: 40,
+            navigation: {
+               nextEl: nextSelector,
+               prevEl: prevSelector,
+            },
+         });
+      }
+
+      
+   });
+
 
   new Swiper(".js-clients-slider-container", {
     loop: false,
