@@ -12,5 +12,4 @@
   hoverEl.addEventListener("mouseleave", () => {
     hoverEl.classList.remove("active");
   });
-  console.log("hoverEl", hoverEl);
 })();
