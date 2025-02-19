@@ -1,26 +1,22 @@
 .header {
-  position: relative;
-  z-index: 5;
+   position: relative;
+   z-index: 5;
 
-  &__wrapper {
-    padding-top: 5.45rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+   &__wrapper {
+      padding-top: 5.45rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-    @media (max-width: $mobile) {
-      padding-top: 3.1rem;
-    }
-  }
+      @media (max-width: $mobile) {
+         padding-top: 3.1rem;
+      }
+   }
 
-  &__logo {
-    @media(max-width: $mobile) {
-      width: 11.5rem;
-    }
+   &__logo {
+      @media(max-width: $mobile) {
+         width: 11.5rem;
+      }
 
-  }
-
-
-
-
+   }
 }
