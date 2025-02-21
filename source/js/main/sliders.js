@@ -13,7 +13,6 @@
     const prevSelector = `${id} .swiper-prev`;
 
     new Swiper(elementSelector, {
-      // Optional parameters
       loop: true,
       slidesPerView: 1,
       speed: 1000,
@@ -121,6 +120,18 @@
       prevEl: ".js-news-slider .swiper-prev",
     },
   });
+
+  new Swiper(".js-teams-slider-container", {
+      loop: false,
+      slidesPerView: 3,
+      speed: 1000,
+      spaceBetween: 40,
+      pagination: false,
+      navigation: {
+      nextEl: ".js-teams-slider .swiper-next",
+      prevEl: ".js-teams-slider .swiper-prev",
+      },
+   });
 
 
 })();
