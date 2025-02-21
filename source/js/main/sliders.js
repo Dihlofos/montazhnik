@@ -26,6 +26,32 @@
     });
   });
 
+  //page-projects
+
+  const projSliders = document.querySelectorAll(".js-projects-page-slider");
+//   const vw = window.outerWidth;
+
+  projSliders.forEach((el, index) => {
+    const id = `#projects-page-slider-${index}`;
+    const elementSelector = `${id} .js-projects-page-slider-container`;
+
+    const nextSelector = `${id} .swiper-next`;
+    const prevSelector = `${id} .swiper-prev`;
+
+    new Swiper(elementSelector, {
+      // Optional parameters
+      loop: true,
+      slidesPerView: 1,
+      speed: 1000,
+      spaceBetween: 0,
+      pagination: false,
+      navigation: {
+        nextEl: nextSelector,
+        prevEl: prevSelector,
+      },
+    });
+  });
+
    //services
 
    const serviceSliders = document.querySelectorAll(".js-services-slider");
