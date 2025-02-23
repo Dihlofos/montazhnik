@@ -26,6 +26,10 @@
 
    &__main-title {
       margin-top: 20rem;
+
+      @media (max-width: $mobile) {
+         margin-top: 9.8rem;
+      }
    }
 
    &__header {
@@ -34,6 +38,15 @@
       gap: 6.4rem;
       padding-top: 3.5rem;
       padding-bottom: 18.5rem;
+
+      @media (max-width: $tablet) {
+         flex-direction: column;
+      }
+
+      @media (max-width: $mobile) {
+         padding-top: 0;
+         padding-bottom: 8rem;
+      }
    }
 
    &__header-desc-wrapper {
@@ -41,6 +54,14 @@
       flex-direction: column;
       gap: 2.3rem;
       max-width: 53.7rem;
+
+      @media (max-width: $tablet) {
+         max-width: 100%;
+      }
+
+      @media (max-width: $mobile) {
+         gap: 1.3rem;
+      }
    }
 
    &__header-desc {
@@ -48,6 +69,10 @@
       font-size: 18px;
       font-weight: 500;
       line-height: 120%;
+
+      @media (max-width: $mobile) {
+         font-size: 1.2rem;
+      }
    }
 
    &__header-achievements {
@@ -55,6 +80,10 @@
       display: flex;
       flex-direction: column;
       gap: 3.5rem;
+
+      @media (max-width: $mobile) {
+         gap: 1.5rem;
+      }
    }
 
    &__header-achievements-top {
@@ -62,6 +91,11 @@
       flex-direction: row;
       gap: 4rem;
       height: 6.5rem;
+
+      @media (max-width: $mobile) {
+         gap: 1.5rem;
+         height: 4.9rem;      
+      }
    }
 
    &__header-achievements-bottom {
@@ -77,6 +111,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media (max-width: $mobile) {
+         padding: 0 1.5rem;
+      
+      }
    }
 
    &__title {
@@ -86,6 +125,10 @@
       text-transform: uppercase;
       line-height: 1.1;
       margin: 0;
+
+      @media (max-width: $mobile) {
+         font-size: 1.3rem;
+      }
    }
 }
 
@@ -96,17 +139,32 @@
       gap: 9rem;
       padding-top: 21.3rem;
       padding-bottom: 22.8rem;
+
+      @media (max-width: $mobile) {
+         gap: 8.2rem;
+         padding-top: 9.7rem;
+         padding-bottom: 17rem;
+      }
    }
 
    &__item {
       border: 1px solid $turq;
       padding: 3.6rem 3.6rem 3.5rem 3.9rem;
+
+      @media (max-width: $mobile) {
+         padding: 1.8rem 1.6rem;
+      }
    }
 
    &__item-wrapper {
       display: flex;
       flex-direction: row;
       gap: 4rem;
+
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         gap: 4.2rem;
+      }
    }
 
    &__content {
@@ -114,6 +172,52 @@
       flex-direction: column;
       gap: 2.3rem;
       max-width: 82.5rem;
+
+
+      @media (max-width: $mobile) {
+         gap: 1.4rem
+      }
+   }
+
+   &__image-wrapper {
+      width: 100%;
+      max-width: 62.5rem;
+
+      @media (max-width: $tablet) {
+         max-width: 100%;    
+  
+      }
+
+      @media (max-width: $mobile) {
+         height: 19.5rem;    
+         aspect-ratio: 62/39;  
+      }
+
+      &--small {
+         max-width: 32.5rem;
+
+         @media (max-width: $tablet) {
+            max-width: 100%;  
+    
+         }
+   
+         @media (max-width: $mobile) {
+            height: 19.5rem;  
+            aspect-ratio: 62/39;    
+         }
+      }
+   }
+
+   &__image-wrapper img {
+
+      @media (max-width: $tablet) {
+         width: 100%;
+      }
+
+      @media (max-width: $mobile) {
+         object-fit: cover;
+         height: 100%;
+      }
    }
 
    &__large-title {
@@ -122,13 +226,25 @@
       &--turq {
          color: $turq;
       }
+
+      @media (max-width: $mobile) {
+         font-size: 2.5rem;
+      }
    }
 
    &__item-desc {
-      font-size: 14px;
+      font-size: 1.4rem;
       font-weight: 500;
       line-height: 120%; 
       max-width: 37.8rem;
+
+      @media (max-width: $tablet) {
+         max-width: 100%;
+      }
+
+      @media (max-width: $mobile) {
+         font-size: 1.2rem;
+      }
    }
 
 
@@ -143,32 +259,60 @@
       text-transform: uppercase;
       line-height: 1.1;
       margin: 0;
+
+      @media (max-width: $mobile) {
+         font-size: 1.3rem ;
+      }
    }
 
    &__team-wrapper {
       margin-top: 5rem;
       margin-bottom: 2rem;
+
+      @media (max-width: $mobile) {
+         margin-bottom: 2.7rem;
+         margin-bottom: 1.7rem;
+
+      }
    }
 
    &__team-header {
       margin-bottom: 3.2rem;
+
+      @media (max-width: $mobile) {
+         margin-bottom: 2.7rem;
+      }
    }
 
    .teams-slider {
       display: flex;
+
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         gap: 2.4rem;
+      }
    }
 
    .js-teams-slider-container {
       margin-left: 5.1rem;
+
+      @media (max-width: $tablet) {
+         width: 100%;
+         margin: 0;
+      }
    }
 
    .team-slide {
-      max-width: 26rem;
       height: 19rem;
       padding: 1.6rem 2.4rem 1.7rem 1.7rem;
       border: 1px solid $turq;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      @media (max-width: $mobile) {
+         height: 12.2rem;
+         padding: 1.6rem 2.4rem 1.7rem 1.7rem;
+      }
    }
 }

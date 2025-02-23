@@ -159,16 +159,30 @@
   });
 
   new Swiper(".js-teams-slider-container", {
-      loop: false,
-      slidesPerView: 3,
-      speed: 1000,
-      spaceBetween: 40,
-      pagination: false,
-      navigation: {
+   loop: false,
+   slidesPerView: 3, 
+   speed: 1000,
+   spaceBetween: 40,
+   pagination: false,
+   navigation: {
       nextEl: ".js-teams-slider .swiper-next",
       prevEl: ".js-teams-slider .swiper-prev",
+   },
+   breakpoints: {
+
+      0: {
+         slidesPerView: 1,
+       },
+ 
+       768: {
+         slidesPerView: 2,
+       },
+      1024: {
+         slidesPerView: 3, 
       },
-   });
+   }
+});
+
 
 
 })();
