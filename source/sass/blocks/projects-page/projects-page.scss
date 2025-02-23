@@ -1,7 +1,7 @@
    .projects-page {
       padding: 17.1rem 0 1rem;
     
-      @media (max-width: $mobile) {
+      @media (max-width: $tablet) {
         padding: 10rem 0 1rem;
       }
     
@@ -16,20 +16,18 @@
          margin-top: 12.5rem;
          margin-bottom: 28.9rem;
 
+         @media (max-width: $mobile) {
+            margin-top: 9.2rem;
+            margin-bottom: 15rem;
+            gap: 8.8rem;
+         }
+
       }
     
       &__item {
         display: flex;
         align-items: flex-start;
         gap: 4rem;
-    
-        @media (max-width: $mobile) {
-          margin-top: 8.5rem;
-    
-          &:first-child {
-            margin-top: 6rem;
-          }
-        }
     
         &--right {
           flex-direction: row-reverse;
@@ -71,13 +69,18 @@
          height: 34.6rem;
          justify-content: space-between;
 
+         @media (max-width: $tablet) {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-top: -9rem;
+            width: 100%;
+            height: auto;
+            align-self: flex-end;
+        }
+
         @media (max-width: $mobile) {
-          display: flex;
-          flex-direction: column;
-          text-align: left;
-          margin-top: -3.3rem;
-          width: 61%;
-          align-self: flex-end;
+            margin-top: -3.3rem;
         }
       }
     
@@ -136,11 +139,16 @@
             margin-left: 0rem;
             margin-right: 19rem;
          }
+
+         @media (max-width: $tablet) {
+              align-self: flex-end;
+              margin: 0;
+          }
     
         @media (max-width: $mobile) {
-          font-size: 1.2rem;
-          line-height: 1.1;
-          margin: 0 0 1.1rem;
+            font-size: 1.2rem;
+            line-height: 1.1;
+            max-width: 16.4rem;
         }
     
       }
@@ -177,22 +185,20 @@
          display: flex;
          flex-direction: column;
          justify-content: flex-start;
+
+         @media (max-width: $tablet) {
+            margin-top: 6.5rem;
+           }
+
+         @media (max-width: $mobile) {
+           margin-top: 3.5rem;
+          }
       }
 
       .button {
          align-self: flex-start;
          margin-top: 2.4rem;
       }
-    
-      // &__footer {
-      //   display: flex;
-      //   justify-content: center;
-      //   padding: 10rem 0 6.4rem;
-    
-      //   @media (max-width: $mobile) {
-      //     padding: 4.6rem 0 5rem;
-      //   }
-      // }
     
     }
     
