@@ -1,27 +1,6 @@
-.services-page {
+.services-page-container {
 
-   .container {
-      position: relative;
-      padding-top: 17rem;
-      
-
-      @media (max-width: $tablet) {
-         padding:0;
-         margin: 0 4rem;
-      }
-
-      @media (max-width: $mobile) {
-         padding:0;
-         margin: 0 1.6rem;
-      }
-   }
-
-   .services {
-      padding: 12.2rem 0 0;
-
-      @media (max-width: $mobile) {
-         padding: 4.1rem 0 0;
-      }
+   .services-page {
 
       &__title {
          margin: 0;
@@ -31,13 +10,15 @@
          display: flex;
          justify-content: space-between;
          gap: 4rem;
+         margin-top: 17rem;
          margin-bottom: 2.5rem;
 
    
          @media (max-width: $mobile) {
             flex-direction: column;
             gap: 3.5rem;
-            margin: 0 0 6rem;
+            margin-top: 9.8rem;
+            margin-bottom: 6.5rem;
          }
       }
    
@@ -60,32 +41,49 @@
       &__item-title {
          color: $turq;
          font-family: $bower;
-         font-size: 18px;
+         font-size: 1.8rem;
          font-style: normal;
          font-weight: 400;
          line-height: 110%; 
          margin: 0rem;
+
+         @media (max-width: $mobile) {
+            font-size: 13px;
+         }
       }
    
       &__item-desc {
          color: $white;
-         font-size: 14px;
+         font-size: 1.4rem;
          font-weight: 400;
          line-height: 120%; 
-         margin-top: 1.5rem;
-         margin-bottom: 3.5rem; 
+         margin-top: 2.3rem;
+         margin-bottom: 8.2rem; 
+
+         @media (max-width: $mobile) {
+            font-size: 1.2rem;
+            margin-bottom: 7rem; 
+         }
          
 
          &--standart {
             margin-bottom: 2.56rem; 
+
+            @media (max-width: $mobile) {
+               margin-top: 2rem;
+               margin-bottom: 3.6rem;             
+            }
          }
       }
 
       &__container {
          display: flex;
          flex-direction: column;
-         // gap: 7.5rem;
-         gap: 13rem;
+         gap: 12.5rem;
+
+         @media (max-width: $mobile) {
+            gap: 6.3rem;
+         }
 
          &--exclusive {
              margin-bottom: 18rem;
@@ -95,8 +93,22 @@
             gap: 12rem;
             margin-top: 7.8rem;
             margin-bottom: 24rem;
+
+            @media (max-width: $mobile) {
+               margin-top: 5.5rem;
+               margin-bottom: 19.2rem;
+               gap: 6rem;
+            }
          }
     
+      }
+
+      &__slider-container {
+         margin-top: 3.3rem;
+
+         @media (max-width: $mobile) {
+            margin-top: 2.5rem;
+         }
       }
    
       &__nav {
@@ -130,21 +142,27 @@
 
       &__page-title {
          font-family: $bower;
-         font-size: 1.8rem ;
+         font-size: 1.8rem;
          text-transform: uppercase;
          margin-bottom: 3.38rem;
 
-         &--standart {
-            margin-bottom: 2rem; 
+         @media (max-width: $tablet) {
+            flex-wrap: wrap;
+            gap: 1.4rem;
+   
          }
 
-        
-     
-         // @media (max-width: $mobile) {
-         //   font-size: 1.3rem;
-         //   line-height: 1.1;
-         //   margin: 0 0 3.8rem;
-         // }
+         &--standart {
+            margin-bottom: 2rem; 
+
+            @media (max-width: $mobile) {
+               margin-bottom: 0;             
+            }
+         }
+
+         @media (max-width: $mobile) {
+           font-size: 1.3rem;
+         }
        }
 
       &__page-block {
@@ -157,32 +175,11 @@
          padding: 1.5rem;
          overflow: hidden;
      
-         @media (max-width: $tablet) {
-           width: calc(50% - 0.7rem);
-         }
-     
          @media (max-width: $mobile) {
-           height: auto;
-           min-height:  16.4rem;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
          }
-     
-         // &--big {
-         //   width: 36rem;
-     
-         //   @media (max-width: $tablet) {
-         //     width: 100%;
-         //   }
-         // }
-     
-         // &--bottom {
-         //   margin-top: 25.6rem;
-     
-         //   @media (max-width: $tablet) {
-     
-         //     margin-top: 0;
-         //   }
-         // }
-     
        }
      
        &__page-block-wrapper {
@@ -194,21 +191,6 @@
          position: relative;
          overflow: hidden;
          padding: 1rem 1rem 1.1rem 1.2rem;
-     
-         // &:after {
-         //   content: '';
-         //   position: absolute;
-         //   top: 0;
-         //   left: 0;
-         //   width: 100%;
-         //   height: 100%;
-         //   background-color: $black;
-         //   opacity: 0.5;
-         // }
-     
-         // @media (max-width: $mobile) {
-         //   padding: 0.9rem 0.5rem 1.1rem 1rem;
-         // }
        }
      
        
@@ -263,7 +245,34 @@
          flex-direction: row;
          justify-content: space-between;
          margin-top: 4.4rem;
+
+         @media (max-width: $mobile) {
+            margin-top: 2.7rem;         
+         }
       }
+
+      &__first-standart-slider {
+         @media (max-width: $mobile) {
+            position: relative;
+         } 
+      }
+
+      &__standart-button {
+         @media (max-width: $mobile) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: -8.4rem;
+         }
+      }
+
+      &__first-standart-title {
+         @media (max-width: $mobile) {
+            max-width: 20rem;
+         }
+      }
+
+
 
       // additional
 
@@ -272,6 +281,11 @@
          display: flex;
          flex-direction: column;
          gap: 6.1rem;
+
+         @media (max-width: $mobile) {
+            margin-block: 4.5rem 20rem; 
+            gap: 6.8rem;
+         }
       }
 
       &__additional-item {
@@ -281,8 +295,18 @@
          width: 100%;
          height: 39.3rem;
          border: 1px solid $turq;
-         padding: 1.6rem 1.6rem;
+         padding: 1.6rem;
          overflow: hidden;
+
+         @media (max-width: $tablet) {
+            height: 55rem;
+            padding: 1.4rem;
+         } 
+
+         @media (max-width: $mobile) {
+            height: 45.2rem;
+            padding: 1.4rem;
+         }
       }
 
       &__additional-item-wrapper {
@@ -295,6 +319,11 @@
          position: relative;
          overflow: hidden;
          padding: 2.2rem 2.31rem 2.1rem 2.31rem;
+
+         @media (max-width: $mobile) {
+            padding: 1.5rem 1.4rem 1.4rem;
+         }
+
 
          &:after {
             content: '';
@@ -309,7 +338,6 @@
       }
 
       &__additional-title {
-         // position: relative;
          
          font-family: $bower;
          font-size: 1.8rem;
@@ -320,9 +348,8 @@
          margin: 0;
    
          @media (max-width: $mobile) {
-         font-size: 1.3rem;
-         line-height: 1.1;
-         margin: 0 0 3.8rem;
+            font-size: 1.3rem;
+            line-height: 1.1;
          }
       }
 
@@ -336,11 +363,21 @@
          flex-direction: row;
          justify-content: space-between;
          gap: 2.31rem;
+
+         @media (max-width: $tablet) {
+            margin-top: 1.8rem;
+            flex-direction: column;
+            gap: 2rem;
+         }
+
+         @media (max-width: $mobile) {
+            margin-top: 1.5rem;
+            gap: 1.05rem;
+         }
       }
 
       &__additional-info-item {
          width: 100%;
-         // height: 87px;  
          height: 8.7rem;
          border: 1px solid $turq;
          background: $black;
@@ -350,6 +387,16 @@
          text-align: center;
          padding: 0 1rem;
          z-index: 4;
+
+         @media (max-width: $tablet) {
+            height: 100%;
+            padding: 1.5rem 1rem; 
+         }
+
+         @media (max-width: $mobile) {
+            height: 100%;
+            padding: .86rem 1rem; 
+         }
       }
 
       &__additional-block-image {
@@ -387,7 +434,7 @@
          display: none; 
    
          @media (max-width: $tablet) {
-            display: block; 
+            display: flex; 
          }
       }
    }
