@@ -72,8 +72,16 @@
          nextEl: nextSelector,
          prevEl: prevSelector,
       },
+      breakpoints: {
+         0: { slidesPerView: 1 },  
+         768: { slidesPerView: 3 }, 
+         1025: { slidesPerView: 4 } 
+      }
    });
+   
    });
+
+  
 
 
    const standartsSliders = document.querySelectorAll(".js-standarts-slider");
@@ -84,18 +92,21 @@
       const nextSelector = `${id} .swiper-next`;
       const prevSelector = `${id} .swiper-prev`;
 
-      if (vw < 1025) {
-         new Swiper(elementSelector, {
-            loop: false,
-            slidesPerView: 1,
-            speed: 1000,
-            spaceBetween: 40,
-            navigation: {
-               nextEl: nextSelector,
-               prevEl: prevSelector,
-            },
-         });
-      }
+      new Swiper(elementSelector, {
+         loop: false,
+         slidesPerView: 4,
+         speed: 1000,
+         spaceBetween: 40,
+         navigation: {
+            nextEl: nextSelector,
+            prevEl: prevSelector,
+         },
+         breakpoints: {
+            0: { slidesPerView: 1 },  
+            768: { slidesPerView: 3 }, 
+            1025: { slidesPerView: 4 } 
+         }
+      });
 
       
    });
