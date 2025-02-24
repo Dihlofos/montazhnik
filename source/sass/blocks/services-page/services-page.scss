@@ -5,7 +5,7 @@
       &__title {
          margin: 0;
       }
-   
+
       &__header {
          display: flex;
          justify-content: space-between;
@@ -13,7 +13,7 @@
          margin-top: 17rem;
          margin-bottom: 2.5rem;
 
-   
+
          @media (max-width: $mobile) {
             flex-direction: column;
             gap: 3.5rem;
@@ -21,15 +21,15 @@
             margin-bottom: 6.5rem;
          }
       }
-   
+
       &__dropdown {
          display: none;
-   
+
          @media (max-width: $tablet) {
             display: block;
          }
       }
-   
+
       &__nav-button {
          @media (max-width: $tablet) {
             &.services-active {
@@ -44,34 +44,34 @@
          font-size: 1.8rem;
          font-style: normal;
          font-weight: 400;
-         line-height: 110%; 
+         line-height: 110%;
          margin: 0rem;
 
          @media (max-width: $mobile) {
             font-size: 13px;
          }
       }
-   
+
       &__item-desc {
          color: $white;
          font-size: 1.4rem;
          font-weight: 400;
-         line-height: 120%; 
+         line-height: 120%;
          margin-top: 2.3rem;
-         margin-bottom: 8.2rem; 
+         margin-bottom: 8.2rem;
 
          @media (max-width: $mobile) {
             font-size: 1.2rem;
-            margin-bottom: 7rem; 
+            margin-bottom: 7rem;
          }
-         
+
 
          &--standart {
-            margin-bottom: 2.56rem; 
+            margin-bottom: 2.56rem;
 
             @media (max-width: $mobile) {
                margin-top: 2rem;
-               margin-bottom: 3.6rem;             
+               margin-bottom: 3.6rem;
             }
          }
       }
@@ -100,7 +100,7 @@
                gap: 6rem;
             }
          }
-    
+
       }
 
       &__slider-container {
@@ -110,26 +110,26 @@
             margin-top: 2.5rem;
          }
       }
-   
+
       &__nav {
          display: flex;
          gap: 1.3rem;
          padding-top: 0.5rem;
-   
+
          @media (max-width: $tablet) {
             display: none;
          }
       }
-   
+
       &__item {
          display: none;
-   
+
          @media (max-width: $tablet) {
             flex-wrap: wrap;
             gap: 1.4rem;
-   
+
          }
-   
+
          &.services-active {
             display: block;
          }
@@ -149,14 +149,14 @@
          @media (max-width: $tablet) {
             flex-wrap: wrap;
             gap: 1.4rem;
-   
+
          }
 
          &--standart {
-            margin-bottom: 2rem; 
+            margin-bottom: 2rem;
 
             @media (max-width: $mobile) {
-               margin-bottom: 0;             
+               margin-bottom: 0;
             }
          }
 
@@ -174,14 +174,14 @@
          border: 1px solid $turq;
          padding: 1.5rem;
          overflow: hidden;
-     
+
          @media (max-width: $mobile) {
             width: 100%;
             height: auto;
             aspect-ratio: 1 / 1;
          }
        }
-     
+
        &__page-block-wrapper {
          display: flex;
          flex-direction: column;
@@ -192,9 +192,9 @@
          overflow: hidden;
          padding: 1rem 1rem 1.1rem 1.2rem;
        }
-     
-       
-     
+
+
+
        &__block-text {
          position: relative;
          z-index: 4;
@@ -202,12 +202,12 @@
          font-size: 1.4rem;
          font-weight: 400;
          line-height: 1.2;
-     
+
          @media (max-width: $mobile) {
            font-size: 1.2rem;
          }
        }
-     
+
        &__page-block-image {
          position: absolute;
          width: 100%;
@@ -217,15 +217,15 @@
          overflow: hidden;
          object-fit: cover;
          object-position: 50% 50%;
-     
+
        }
-   
-   
+
+
       &__footer {
          display: flex;
          justify-content: center;
          padding: 8.4rem 0 6.4rem;
-   
+
          @media (max-width: $mobile) {
             padding: 4.4rem 0 12.4rem;
          }
@@ -247,14 +247,14 @@
          margin-top: 4.4rem;
 
          @media (max-width: $mobile) {
-            margin-top: 2.7rem;         
+            margin-top: 2.7rem;
          }
       }
 
       &__first-standart-slider {
          @media (max-width: $mobile) {
             position: relative;
-         } 
+         }
       }
 
       &__standart-button {
@@ -283,7 +283,7 @@
          gap: 6.1rem;
 
          @media (max-width: $mobile) {
-            margin-block: 4.5rem 20rem; 
+            margin-block: 4.5rem 20rem;
             gap: 6.8rem;
          }
       }
@@ -301,7 +301,7 @@
          @media (max-width: $tablet) {
             height: 55rem;
             padding: 1.4rem;
-         } 
+         }
 
          @media (max-width: $mobile) {
             height: 45.2rem;
@@ -338,7 +338,7 @@
       }
 
       &__additional-title {
-         
+
          font-family: $bower;
          font-size: 1.8rem;
          line-height: 1.1;
@@ -346,7 +346,7 @@
          z-index: 4;
          overflow-wrap: break-word;
          margin: 0;
-   
+
          @media (max-width: $mobile) {
             font-size: 1.3rem;
             line-height: 1.1;
@@ -390,12 +390,12 @@
 
          @media (max-width: $tablet) {
             height: 100%;
-            padding: 1.5rem 1rem; 
+            padding: 1.5rem 1rem;
          }
 
          @media (max-width: $mobile) {
             height: 100%;
-            padding: .86rem 1rem; 
+            padding: .86rem 1rem;
          }
       }
 
@@ -407,22 +407,22 @@
          left: 0;
          overflow: hidden;
          object-fit: cover;
-         object-position: 50% 50%; 
-      
+         object-position: 50% 50%;
+
          &.image--top {
-            object-position: 50% 38%; 
+            object-position: 50% 38%;
          }
 
          &.image--top-extra {
-            object-position: 50% 13%; 
+            object-position: 50% 13%;
          }
-      
-         
+
+
       }
 
    }
 
-   .services__slider { 
+   .services__slider {
 
       .swiper-nav {
          margin-bottom: 3.2rem;
@@ -431,15 +431,15 @@
 
    .standarts__slider {
       .swiper-nav {
-         display: none; 
-   
+         display: none;
+
          @media (max-width: $tablet) {
-            display: flex; 
+            display: flex;
          }
       }
    }
 
 
-  
-   
+
+
 }

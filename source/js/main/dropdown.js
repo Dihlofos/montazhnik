@@ -2,6 +2,8 @@
 (function () {
   const dropdowns = document.querySelectorAll(".js-dropdown");
 
+  if (!dropdowns.length) return;
+
   document.addEventListener("click", (el) => {
     const clicked = el
       .composedPath()
