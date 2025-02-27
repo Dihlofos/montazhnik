@@ -2961,9 +2961,8 @@
     }
 
     if (params.cssMode) {
-      wrapperEl[
-        swiper.isHorizontal() ? "scrollLeft" : "scrollTop"
-      ] = swiper.isHorizontal() ? -x : -y;
+      wrapperEl[swiper.isHorizontal() ? "scrollLeft" : "scrollTop"] =
+        swiper.isHorizontal() ? -x : -y;
     } else if (!params.virtualTranslate) {
       $wrapperEl.transform(
         "translate3d(" + x + "px, " + y + "px, " + z + "px)"

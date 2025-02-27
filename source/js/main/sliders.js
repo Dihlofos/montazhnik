@@ -13,7 +13,6 @@
     const prevSelector = `${id} .swiper-prev`;
 
     new Swiper(elementSelector, {
-      // Optional parameters
       loop: true,
       slidesPerView: 1,
       speed: 1000,
@@ -29,7 +28,7 @@
   //page-projects
 
   const projSliders = document.querySelectorAll(".js-projects-page-slider");
-//   const vw = window.outerWidth;
+  //   const vw = window.outerWidth;
 
   projSliders.forEach((el, index) => {
     const id = `#projects-page-slider-${index}`;
@@ -52,54 +51,33 @@
     });
   });
 
-   //services
+  //services
 
-   const serviceSliders = document.querySelectorAll(".js-services-slider");
+  const serviceSliders = document.querySelectorAll(".js-services-slider");
 
-   serviceSliders.forEach((el, index) => {
-   const id = `#services-slider-${index}`;
-   const elementSelector = `${id} .js-services-slider-container`;
+  serviceSliders.forEach((el, index) => {
+    const id = `#services-slider-${index}`;
+    const elementSelector = `${id} .js-services-slider-container`;
 
-   const nextSelector = `${id} .swiper-next`;
-   const prevSelector = `${id} .swiper-prev`; 
+    const nextSelector = `${id} .swiper-next`;
+    const prevSelector = `${id} .swiper-prev`;
 
-   new Swiper(elementSelector, {
+    new Swiper(elementSelector, {
       loop: false,
       slidesPerView: 4,
       speed: 1000,
       spaceBetween: 40,
       navigation: {
-         nextEl: nextSelector,
-         prevEl: prevSelector,
+        nextEl: nextSelector,
+        prevEl: prevSelector,
       },
-   });
-   });
-
-
-   const standartsSliders = document.querySelectorAll(".js-standarts-slider");
-
-      standartsSliders.forEach((el, index) => {
-      const id = `#standarts-slider-${index}`;
-      const elementSelector = `${id} .js-standarts-slider-container`;
-      const nextSelector = `${id} .swiper-next`;
-      const prevSelector = `${id} .swiper-prev`;
-
-      if (vw < 1025) {
-         new Swiper(elementSelector, {
-            loop: false,
-            slidesPerView: 1,
-            speed: 1000,
-            spaceBetween: 40,
-            navigation: {
-               nextEl: nextSelector,
-               prevEl: prevSelector,
-            },
-         });
-      }
-
-      
-   });
-
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 3 },
+        1025: { slidesPerView: 4 },
+      },
+    });
+  });
 
   new Swiper(".js-clients-slider-container", {
     loop: false,
@@ -148,5 +126,27 @@
     },
   });
 
+  new Swiper(".js-teams-slider-container", {
+    loop: false,
+    slidesPerView: 3,
+    speed: 1000,
+    spaceBetween: 40,
+    pagination: false,
+    navigation: {
+      nextEl: ".js-teams-slider .swiper-next",
+      prevEl: ".js-teams-slider .swiper-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
 
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
 })();
