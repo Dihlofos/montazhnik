@@ -146,6 +146,10 @@
     &.show {
       display: flex;
     }
+
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+    }
    }
 
    &__error {
@@ -158,6 +162,10 @@
     flex-direction: column;
     justify-content: center;
     display: none;
+
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+    }
 
     &.show {
       display: flex;
@@ -188,6 +196,7 @@
          gap: 1.7rem;
          padding: 1.9rem 1.8rem 3.4rem;
          margin-bottom: 16.2rem;
+         min-height: 43.4rem;
       }
    }
 
