@@ -1,9 +1,5 @@
 "use strict";
 (function () {
-  emailjs.init({
-    publicKey: "ilhHVNppMlaoqE4RL",
-  });
-
   const form = document.querySelector(".js-form");
   const formSubmitButton = document.querySelector(".js-form-submit");
   const formDone = document.querySelector(".js-form-done");
@@ -12,6 +8,11 @@
 
   function initEvents() {
     if (!form) return;
+
+    emailjs.init({
+      publicKey: "ilhHVNppMlaoqE4RL",
+    });
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       grecaptcha.ready(function () {
