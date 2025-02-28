@@ -192,13 +192,23 @@
                <div class="contacts-page__item-title">Хотите пригласить нас в тендер?</div>
                <div class="contacts-page__item-desc contacts-page__form-desc">Напишите через форму обратной связи</div>
             </div>
-
-            <!-- <form class="contacts-page__form">
-               <input type="text" class="contacts-page__input contacts-page__input-base" placeholder="Имя">
-               <input type="text" class="contacts-page__input contacts-page__input-base" placeholder="Телефон/Телеграм">
-               <textarea class="contacts-page__textarea contacts-page__input-base" placeholder="Коротко о запросе"></textarea>
-               <button type="submit" class="contacts-page__button button ">Отправить</button>
-            </form> -->
+            <div class="contacts-page__form">
+              <form class="js-form show">
+                <input name="name" type="text" class="contacts-page__input contacts-page__input-base" placeholder="Имя">
+                <input name="phone" type="text" class="contacts-page__input contacts-page__input-base" placeholder="Телефон/Телеграм">
+                <textarea name="message" class="contacts-page__textarea contacts-page__input-base" placeholder="Коротко о запросе"></textarea>
+                <button type="submit" class="contacts-page__button button js-form-submit ">
+                  <span>Отправить</span>
+                  <div class="loader"></div>
+                </button>
+              </form>
+              <div class="contacts-page__success js-form-done">
+                Спасибо, мы получили ваше сообщение и вернемся с обратной связью.
+              </div>
+              <div class="contacts-page__error js-form-wrong">
+                К сожалению, сообщение не отправлено, попробуйте отправить его позже, или свяжитесь с нами другими способами.
+              </div>
+            </div>
 
           </div>
         </sector>
@@ -224,6 +234,10 @@
 
       </main>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LczUdEaAAAAACImrHbKWiSSutDmsNCH1sC9zXbu"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>
