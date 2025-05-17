@@ -311,11 +311,13 @@
   //   const vw = window.outerWidth;
 
   projSliders.forEach((el, index) => {
-    const id = `#projects-page-slider-${index}`;
+    const id = `#projects-page-slider-${index + 1}`;
     const elementSelector = `${id} .js-projects-page-slider-container`;
 
     const nextSelector = `${id} .swiper-next`;
     const prevSelector = `${id} .swiper-prev`;
+
+    console.log("elementSelector", elementSelector);
 
     new Swiper(elementSelector, {
       // Optional parameters
