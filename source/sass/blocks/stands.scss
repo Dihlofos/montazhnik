@@ -67,6 +67,7 @@
 
   &__content {
     display: flex;
+    justify-content: center;
   }
 
   &__block {
@@ -127,6 +128,8 @@
     color: $turq;
     transition: color 0.2s ease-in-out;
     margin: 0;
+    text-align: center;
+    width: 100%;
 
     @media (max-width: $tablet) {
       font-size: 2rem;
@@ -144,28 +147,22 @@
     }
 
     .stands__block--left &{
-      right: 12.1rem;
-
-      @media (max-width: $tablet) {
-        right: 4rem;
-      }
+      right: 0;
 
       @media (max-width: $mobile) {
         right: auto;
         left: auto;
+        width: auto;
       }
     }
 
     .stands__block--right & {
-      left: 12.1rem;
-
-      @media (max-width: $tablet) {
-        left: 4rem;
-      }
+      left: 0;
 
       @media (max-width: $mobile) {
         right: auto;
         left: auto;
+        width: auto;
       }
     }
 

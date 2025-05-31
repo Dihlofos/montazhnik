@@ -129,6 +129,13 @@
     padding: 1.5rem;
     overflow: hidden;
 
+    &:first-child {
+      .services__block-image {
+        transform: scaleX(-1);
+      }
+
+    }
+
     @media (max-width: $tablet) {
       width: calc(50% - 0.7rem);
     }
@@ -225,6 +232,8 @@
     overflow: hidden;
     object-fit: cover;
     object-position: 50% 50%;
+
+
 
   }
 
